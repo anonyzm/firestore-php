@@ -73,6 +73,9 @@ class ValueMapper
      */
     public function decodeValues(array $fields)
     {
+        if(!is_array($fields)) {
+            $fields = [];
+        }
         $output = [];
 
         foreach ($fields as $key => $val) {
@@ -294,6 +297,11 @@ class ValueMapper
                 break;
 
             case 'arrayValue':
+                if(empty($value['values'])) {
+                    $value = [
+                        'values' => [],
+                    ];
+                }
                 $res = [];
 
                 foreach ($value['values'] as $val) {
