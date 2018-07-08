@@ -19,7 +19,7 @@
         "test": "phpunit"
     },
     "require": {
-        "kreait/firebase-php": "dev-master",
+        "kreait/firebase-php": "^4.11",
         "google/protobuf": "v3.6.0.1"
     },
     "require-dev": {
